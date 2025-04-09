@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
@@ -18,8 +17,6 @@ type ServiceNavigationProps = {
 };
 
 export default function ServiceNavigation({ serviceList, currentServiceId, categoryTitle }: ServiceNavigationProps) {
-  const pathname = usePathname();
-  
   // Encontra o índice do serviço atual
   const currentIndex = serviceList.findIndex(service => service.id === currentServiceId);
   

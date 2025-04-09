@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiTwitter } from 'react-icons/fi';
+import { FiPhone, FiMail, FiMapPin, FiInstagram } from 'react-icons/fi';
 
 export default function Footer() {
   return (
