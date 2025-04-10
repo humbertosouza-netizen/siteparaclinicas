@@ -1,0 +1,5 @@
+[33m1b6bc14[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Correções nos arquivos e componentes para o deploy
+[33mcf76ddf[m Atualizado o arquivo README e corrigido problemas de build
+[33mbca8eef[m Versão inicial do site para clínicas de estética
+[33mcbff509[m Add postcss config
+[33m22d89db[m Update dependencies to compatible versions
