@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiCheck, FiArrowRight, FiSend } from 'react-icons/fi';
+import { FiCheck, FiArrowRight, FiSend } from '../components/icons';
 
 export default function Booking() {
   const [step, setStep] = useState(1);

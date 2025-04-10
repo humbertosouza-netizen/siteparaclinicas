@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import ServiceDetail from '@/components/ServiceDetail';
 import ServiceNavigation from '@/components/ServiceNavigation';
 import { getServiceData, getServiceLinks, getCategoryTitle } from '@/data/services';
-import type { Metadata } from 'next';
+import type { Metadata, ResolvingMetadata } from 'next';
 
 type ServicePageProps = {
   params: {
@@ -12,6 +12,7 @@ type ServicePageProps = {
 
 export async function generateMetadata(
   { params }: ServicePageProps,
+  parent: ResolvingMetadata
 ): Promise<Metadata> {
   const serviceId = params.serviceId;
   
@@ -21,7 +22,7 @@ export async function generateMetadata(
       title: `${serviceData.title} | Azambuja Clínica de Estética`,
       description: serviceData.description,
     };
-  } catch {
+  } catch (error) {
     return {
       title: 'Serviço não encontrado',
       description: 'O serviço que você está procurando não existe ou foi removido.',
@@ -47,7 +48,7 @@ export default function ServicePage({ params }: ServicePageProps) {
         <ServiceDetail {...serviceData} />
       </>
     );
-  } catch {
+  } catch (error) {
     notFound();
   }
 } 

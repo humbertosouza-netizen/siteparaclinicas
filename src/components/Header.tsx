@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FiMenu, FiX, FiPhone } from 'react-icons/fi';
+import { FiMenu, FiX, FiPhone } from '../components/icons';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 10) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -26,7 +27,7 @@ export default function Header() {
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-secondary/95 shadow-lg py-2' : 'bg-transparent py-4'
+      scrolled ? 'bg-secondary shadow-lg py-2' : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
@@ -36,7 +37,7 @@ export default function Header() {
               <div className="text-2xl font-bold text-primary">
                 <span className="text-accent">A</span>zambuja
               </div>
-              <div className="hidden md:block ml-2 text-xs text-light">
+              <div className="hidden md:block ml-2 text-xs text-white font-medium">
                 <p>CLÍNICA DE ESTÉTICA AVANÇADA</p>
               </div>
             </div>
@@ -44,32 +45,32 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-light hover:text-primary font-medium transition">
+            <Link href="/" className="text-white hover:text-primary transition">
               Início
             </Link>
-            <Link href="#sobre" className="text-light hover:text-primary font-medium transition">
+            <Link href="#sobre" className="text-white hover:text-primary transition">
               Sobre
             </Link>
-            <Link href="#servicos" className="text-light hover:text-primary font-medium transition">
+            <Link href="#servicos" className="text-white hover:text-primary transition">
               Serviços
             </Link>
-            <Link href="#especialistas" className="text-light hover:text-primary font-medium transition">
+            <Link href="#especialistas" className="text-white hover:text-primary transition">
               Especialistas
             </Link>
-            <Link href="#agendar" className="text-light hover:text-primary font-medium transition">
+            <Link href="#agendar" className="text-white hover:text-primary transition">
               Agende
             </Link>
-            <Link href="#contato" className="text-light hover:text-primary font-medium transition">
+            <Link href="#contato" className="text-white hover:text-primary transition">
               Contato
             </Link>
-            <a href="https://wa.me/5566996410251?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20tratamentos%20da%20Clínica%20Azambuja." className="bg-primary hover:bg-primary-dark text-light py-2 px-4 rounded-full flex items-center transition-colors">
+            <a href="https://wa.me/5566996410251?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20tratamentos%20da%20Clínica%20Azambuja." className="bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-full flex items-center transition-colors">
               <FiPhone className="mr-2" /> (66) 99641-0251
             </a>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden relative z-10 text-light focus:outline-none"
+            className="md:hidden relative z-10 text-white focus:outline-none"
             onClick={toggleMenu}
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -90,49 +91,49 @@ export default function Header() {
             <nav className="flex flex-col space-y-4">
               <Link 
                 href="/" 
-                className="text-light hover:text-primary font-medium transition"
+                className="text-white hover:text-primary transition"
                 onClick={() => setIsOpen(false)}
               >
                 Início
               </Link>
               <Link 
                 href="#sobre" 
-                className="text-light hover:text-primary font-medium transition"
+                className="text-white hover:text-primary transition"
                 onClick={() => setIsOpen(false)}
               >
                 Sobre
               </Link>
               <Link 
                 href="#servicos" 
-                className="text-light hover:text-primary font-medium transition"
+                className="text-white hover:text-primary transition"
                 onClick={() => setIsOpen(false)}
               >
                 Serviços
               </Link>
               <Link 
                 href="#especialistas" 
-                className="text-light hover:text-primary font-medium transition"
+                className="text-white hover:text-primary transition"
                 onClick={() => setIsOpen(false)}
               >
                 Especialistas
               </Link>
               <Link 
                 href="#agendar" 
-                className="text-light hover:text-primary font-medium transition"
+                className="text-white hover:text-primary transition"
                 onClick={() => setIsOpen(false)}
               >
                 Agende
               </Link>
               <Link 
                 href="#contato" 
-                className="text-light hover:text-primary font-medium transition"
+                className="text-white hover:text-primary transition"
                 onClick={() => setIsOpen(false)}
               >
                 Contato
               </Link>
               <a 
                 href="https://wa.me/5566996410251?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20tratamentos%20da%20Clínica%20Azambuja." 
-                className="bg-primary hover:bg-primary-dark text-light py-2 px-4 rounded-full flex items-center justify-center transition-colors"
+                className="bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-full flex items-center justify-center transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 <FiPhone className="mr-2" /> (66) 99641-0251

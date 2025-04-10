@@ -1,0 +1,5 @@
+[33mcommit 49a22d1e08d2ad9b49934bdc1809e21419870456[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: humbertosouza-netizen <humbertoboxe2022@gmail.com>
+Date:   Wed Apr 9 14:36:23 2025 -0300
+
+    Fix linting errors for deployment

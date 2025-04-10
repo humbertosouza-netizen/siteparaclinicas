@@ -1,11 +1,11 @@
 'use client';
 
-import { FiMessageCircle } from 'react-icons/fi';
+import { FiMessageCircle } from '../components/icons';
 import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
   // Número de telefone para o WhatsApp (substitua pelo número real)
-  const phoneNumber = '5566996410251';
+  const phoneNumber = '556699641-0251';
   const message = 'Olá! Gostaria de mais informações sobre os tratamentos da Clínica Azambuja.';
 
   // Cria a URL do WhatsApp com o número e mensagem

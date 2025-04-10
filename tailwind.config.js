@@ -16,7 +16,7 @@ module.exports = {
         gray: 'var(--gray)',
       },
       fontFamily: {
-        sans: ['var(--font-sans)'],
+        sans: ['var(--font-montserrat)', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

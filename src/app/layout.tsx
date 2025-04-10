@@ -5,6 +5,7 @@ import "./globals.css";
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
   variable: "--font-montserrat",
 });
 
@@ -20,10 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body
-        className={`${montserrat.variable} font-sans antialiased`}
-      >
+    <html lang="pt-BR" className={montserrat.variable}>
+      <body className="font-sans antialiased">
         {children}
       </body>
     </html>
