@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { FiArrowLeft } from 'react-icons/fi';
 
 export default function NotFound() {
   return (
@@ -15,9 +14,9 @@ export default function NotFound() {
         </p>
         <Link 
           href="/" 
-          className="inline-flex items-center bg-primary hover:bg-primary-dark text-light font-medium py-3 px-6 rounded-full transition duration-300"
+          className="inline-flex items-center bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition duration-300"
         >
-          <FiArrowLeft className="mr-2" /> Voltar para o início
+          Voltar para o início
         </Link>
       </div>
     </div>

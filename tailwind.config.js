@@ -13,14 +13,13 @@ module.exports = {
         secondary: 'var(--secondary)',
         accent: 'var(--accent)',
         light: 'var(--light)',
-        gray: 'var(--gray)',
       },
       fontFamily: {
-        sans: ['var(--font-montserrat)', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans: ['var(--font-montserrat)', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero-pattern': "url('/images/hero-bg.jpg')",
       },
     },
   },

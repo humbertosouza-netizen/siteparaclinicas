@@ -1,6 +1,5 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -15,11 +14,17 @@ export default function ServiceLayout({
 }) {
   return (
     <>
-      <Header />
+      <header className="fixed w-full z-50 bg-white shadow-md py-4">
+        <div className="container mx-auto px-4">
+          <Link href="/" className="text-primary font-bold">← Voltar para o início</Link>
+        </div>
+      </header>
       <main className="pt-20">
         {children}
       </main>
-      <Footer />
+      <footer className="bg-secondary py-8 text-center">
+        <p className="text-sm text-gray-700">© 2025 Clínica de Estética Avançada. Todos os direitos reservados.</p>
+      </footer>
       <WhatsAppButton />
     </>
   );

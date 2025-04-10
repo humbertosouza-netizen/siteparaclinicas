@@ -1,11 +1,11 @@
 'use client';
 
-import { FiMessageCircle } from '../components/icons';
+import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function WhatsAppButton() {
   // Número de telefone para o WhatsApp (substitua pelo número real)
-  const phoneNumber = '556699641-0251';
+  const phoneNumber = '5566996410251';
   const message = 'Olá! Gostaria de mais informações sobre os tratamentos da Clínica Azambuja.';
 
   // Cria a URL do WhatsApp com o número e mensagem
@@ -16,7 +16,7 @@ export default function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-primary text-light p-4 rounded-full shadow-lg hover:bg-primary-dark transition-colors"
+      className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{
@@ -28,7 +28,7 @@ export default function WhatsAppButton() {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
-      <FiMessageCircle size={24} />
+      <FaWhatsapp size={24} />
       <span className="sr-only">Contato via WhatsApp</span>
     </motion.a>
   );

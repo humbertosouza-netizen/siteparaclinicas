@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --primary: #fb2b6a;
-  --primary-dark: #d91b57;
-  --secondary: #2d2630;
-  --accent: #e09048;
-  --light: #e5e3e2;
-  --gray: #636e73;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 245, 245, 245;
+  --background-end-rgb: 255, 255, 255;
+  --primary: #9F7B7B;
+  --primary-dark: #8a6a6a;
+  --secondary: #E6E0DF;
+  --accent: #D9C1B4;
+  --light: #F5F5F5;
+  --gray: #666666;
 }
 
 html {
@@ -16,8 +19,13 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: var(--secondary);
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
 @layer base {
@@ -32,7 +40,7 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-white py-2 px-6 rounded-lg hover:bg-primary-dark transition-colors duration-300;
+    @apply bg-primary text-white py-2 px-6 rounded-md hover:bg-primary-dark transition-colors duration-300;
   }
   
   .container {
@@ -44,7 +52,7 @@ body {
   }
   
   .section-subtitle {
-    @apply text-gray max-w-2xl mx-auto;
+    @apply text-gray-600 max-w-2xl mx-auto;
   }
 }
 

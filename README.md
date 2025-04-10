@@ -34,8 +34,33 @@ npm run dev
 
 Acesse [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
+## GitHub e Deploy
+
+### Enviar para GitHub
+
+Para enviar o código para o GitHub, execute os seguintes comandos:
+
+```bash
+# Adicionar repositório remoto
+git remote add origin https://github.com/humbertosouza-netizen/siteparaclinicas.git
+
+# Enviar código para a branch main
+git push -u origin main
+```
+
+Se estiver encontrando problemas com autenticação, você pode usar:
+
+```bash
+# Configurar armazenamento de credenciais
+git config --global credential.helper store
+
+# Ou usar HTTPS com token de acesso pessoal
+git remote set-url origin https://SEU-TOKEN@github.com/humbertosouza-netizen/siteparaclinicas.git
+git push -u origin main
+```
+
 ## Deploy na Vercel
 
 Este projeto está otimizado para deploy na [Vercel](https://vercel.com), bastando conectar o repositório à plataforma.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fseu-usuario%2Fsiteparaclinicas)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhumbertosouza-netizen%2Fsiteparaclinicas)
